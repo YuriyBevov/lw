@@ -1,0 +1,16 @@
+/*ПЕРЕИСПОЛЬЗУЕМЫЕ ИНЛАЙН СТИЛИ*/
+
+.lw {
+  &-container {
+    margin: 0 auto;
+    padding: 0 var(--container-offset);
+    max-width: var(--container-width);
+  }
+
+  &-container-fluid {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 var(--container-offset);
+    max-width: var(--container-fluid-width);
+  }
+}
