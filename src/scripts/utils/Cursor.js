@@ -35,8 +35,7 @@ export class Cursor {
 class CursorElement {
   DOM = {
     cursor: null,
-    innerCursor: null,
-    feTurbulence: null
+    innerCursor: null
   };
 
   renderedStyles = {
@@ -44,6 +43,7 @@ class CursorElement {
 		ty: {previous: 0, current: 0, amt: 0.2},
     opacity: {previous: 1, current: 1, amt: 0.2}
   };
+
   bounds;
   filterID = '#cursor-filter';
 	filterValues = {turbulence: 1};
@@ -51,7 +51,6 @@ class CursorElement {
   constructor(elem) {
     this.DOM.cursor = elem;
     this.DOM.innerCursor = this.DOM.cursor.querySelector('.cursor-inner');
-    this.DOM.feTurbulence = document.querySelector(`${this.filterID} > feTurbulence`);
 
 		this.DOM.cursor.style.opacity = 0;
 		this.bounds = this.DOM.cursor.getBoundingClientRect();
@@ -72,22 +71,12 @@ class CursorElement {
 		window.addEventListener('mousemove', onMouseMoveHandler);
   }
 
-  hoverAnimationStart() {
+  hoverAnimationStart(evt) {
     this.filterTimeline.restart();
   }
 
   hoverAnimationKill() {
-    gsap.to(this.DOM.innerCursor, {
-      duration: 1,
-      scale: 1,
-      fill: 'transparent',
-      stroke: 'black',
-      opacity: 1,
-      transformOrigin: '50% 50%'
-    });
-    setTimeout(() => {
-      this.filterTimeline.progress(0).kill();
-    }, 200);
+    this.filterTimeline.progress(0).kill();
   }
 
   createFilterTimeline() {
@@ -95,11 +84,15 @@ class CursorElement {
       paused: true
     })
     .to(this.DOM.innerCursor, {
-      duration: 1,
+      duration: 0.5,
+
+      startAt: {
+        scale: 1,
+        opacity: 1,
+      },
+
       scale: 1.3,
-      fill: 'red',
-      stroke: 'red',
-      opacity: 0.2,
+      opacity: 0.1,
       transformOrigin: '50% 50%'
     });
 	}
@@ -112,7 +105,6 @@ class CursorElement {
     }
 
 		this.DOM.cursor.style.transform = `translateX(${(this.renderedStyles['tx'].previous)}px) translateY(${this.renderedStyles['ty'].previous}px)`;
-    this.DOM.feTurbulence.setAttribute('baseFrequency', this.filterValues.turbulence * Math.random().toFixed(2));
 
     this.renderedStyles['tx'].current = cursorCoords.x - this.bounds.width/2;
 		this.renderedStyles['ty'].current = cursorCoords.y - this.bounds.height/2;

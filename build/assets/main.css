@@ -348,33 +348,116 @@ template {
 /* stylelint-disable color-function-notation */
 /* stylelint-disable alpha-value-notation */
 :root {
-  --font-family: "...", sans-serif;
-  --content-width: 1160px;
-  --content-fluid-width: 1790px;
+  --base-font: "MontserratAlternates", sans-serif;
+  --alt-font: "Lato", sans-serif;
+  --content-width: 1400px;
+  --content-sm-width: 1140px;
+  --content-fluid-width: 1920px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
-  --container-fluid-width: calc(var(--content-fluid-width) + (var(--container-offset) * 2));
-  --light-color: #fff;
-  --accent-color: #d52027;
-  --dark-color: #141024;
-  --text-color: rgba(20, 16, 36, 0.7);
-  --main-bg-color: var(--light-color);
+  --container-sm-width: calc(var(--content-sm-width) + (var(--container-offset) * 2));
+  --container-fluid-width: var(--content-fluid-width);
+  --accent: #d52027;
+  --primary: #10164a;
+  --secondary: #8468f6;
+  --warning: #ec9a29;
+  --white: #ffffff;
+  --black: #000000;
+  --purple-0: #080D39;
+  --purple-1: #151B53;
+  --purple-2: #2B209B;
+  --purple-3: #5030d4;
+  --purple-4: #6E52E0;
+  --purple-5: #8468f6;
+  --purple-6: #947bfb;
+  --purple-7: #7672FF;
+  --primary-text-color: var(--white);
+  --main-bg-color: var(--primary);
+  --alt-bg-color: var(--purple-0);
+  --price-badge-linear-bg: linear-gradient(270deg, #EC9A29 59.62%, rgba(236, 154, 41, 0.29) 142.88%);
+  --main-box-shadow: 2px 4px 6px rgba(236, 154, 41, 0.42);
+  --service-card-bg: rgba(67, 21, 255, 0.2);
+  --service-icon-color: var(--purple-6);
+  --main-button-linear-bg: linear-gradient(90deg, #F5DFA0 0%, #EC9A29 68.75%);
   --main-scrollbar-width: 6px;
-  --main-scrollbar-color: var(--light-color);
-  --main-scrollbar-thumb-color: var(--accent-color);
-  --text-xxl: clamp(36px, 7.5vw, 64px);
-  --text-xl: clamp(28px, 5vw, 44px);
-  --text-lg: clamp(24px, 4vw, 36px);
-  --text-md: clamp(20px, 3.5vw, 32px);
-  --text-sm: clamp(16px, 3vw, 28px);
-  --text-xs: 14px;
-  --text-xxs: 12px;
+  --main-scrollbar-color: var(--purple-6);
+  --main-scrollbar-thumb-color: var(--primary);
 }
 
 /* stylelint-disable */
 /* stylelint-disable */
 /*down*/
 /*up*/
+@font-face {
+  font-family: "MontserratAlternates";
+  src: url("../assets/fonts/../fonts/MontserratAlternates-Thin.woff2") format("woff2");
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MontserratAlternates";
+  src: url("../assets/fonts/../fonts/MontserratAlternates-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MontserratAlternates";
+  src: url("../assets/fonts/../fonts/MontserratAlternates-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MontserratAlternates";
+  src: url("../assets/fonts/../fonts/MontserratAlternates-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MontserratAlternates";
+  src: url("../assets/fonts/../fonts/MontserratAlternates-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MontserratAlternates";
+  src: url("../assets/fonts/../fonts/MontserratAlternates-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MontserratAlternates";
+  src: url("../assets/fonts/../fonts/MontserratAlternates-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/../fonts/Lato-Regulat.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/../fonts/Lato-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/../fonts/Lato-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
 *,
 *::before,
 *::after {
@@ -404,8 +487,10 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  font-family: var(--font-family, sans-serif);
+  font-family: var(--base-font, sans-serif);
   font-weight: 400;
+  line-height: 1.2;
+  color: var(--primary-text-color);
   background-color: var(--main-bg-color);
 }
 body.body-locked {
@@ -420,7 +505,8 @@ main {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100%;
+  height: 100%;
+  padding: 50px 0;
 }
 
 footer {
@@ -439,6 +525,56 @@ a {
 }
 
 /*ПЕРЕИСПОЛЬЗУМЫЕ КЛАССЫ ДЛЯ CSS*/
+.list-reset, .features__list, .service__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.button-reset, .lw-main-btn {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: none;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.flex-column, .info-card, .service-card__content, .service-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.flex-centered-content, .lw-main-btn, .lw-price-badge {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.glassmorph-bg, .info-card, .service-card {
+  background-color: var(--service-card-bg);
+  border-radius: 4px;
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+}
+
 /*ПЕРЕИСПОЛЬЗУЕМЫЕ ИНЛАЙН СТИЛИ*/
 .lw-container {
   margin: 0 auto;
@@ -451,8 +587,165 @@ a {
   padding: 0 var(--container-offset);
   max-width: var(--container-fluid-width);
 }
+.lw-main-title {
+  position: relative;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 1.1;
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+  /*@include m-b-desktop-down {
+    font-size: 48px;
+  }
+
+  @include m-b-laptop-down {
+    font-size: 42px;
+  }
+
+  @include m-b-tablet-lg-down {
+    font-size: 36px;
+  }
+
+  @include m-b-tablet-down {
+    font-size: 32px;
+  }
+
+  @include m-b-mobile-lg-down {
+    font-size: 24px;
+  }*/
+}
+.lw-main-title span {
+  display: inline;
+  color: var(--secondary);
+}
+.lw-main-title::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 6px;
+  content: "";
+  background-color: var(--secondary);
+}
+.lw-price-badge {
+  font-size: 24px;
+  font-weight: 700;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 14px 32px;
+  border-radius: 0 50px 50px 0;
+  -webkit-box-shadow: var(--main-box-shadow);
+  box-shadow: var(--main-box-shadow);
+  background: var(--price-badge-linear-bg);
+  color: var(--primary);
+}
+.lw-main-btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 40px;
+  padding: 14px 32px;
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 50px;
+  -webkit-box-shadow: var(--main-box-shadow);
+  box-shadow: var(--main-box-shadow);
+  background: var(--main-button-linear-bg);
+  color: var(--primary);
+}
+.lw-section {
+  padding: 40px 0;
+}
 
 /* Компоненты */
+.cursor {
+  display: none;
+}
+
+/*Есть ли у устройства указывающее уст-во ( напр. мышь)*/
+@media (any-pointer: fine) {
+  .custom-cursor-container.hidden {
+    display: none;
+  }
+
+  .cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    pointer-events: none;
+    z-index: 499;
+    stroke: var(--purple-3);
+    mix-blend-mode: difference;
+  }
+
+  .no-js .cursor {
+    display: none;
+  }
+}
+.service-card {
+  height: 100%;
+}
+.service-card__title {
+  font-family: var(--base-font);
+  font-size: 24px;
+  font-weight: 700;
+  min-height: 60px;
+  margin-bottom: 8px;
+}
+.service-card__text {
+  font-weight: 300;
+}
+.service-card__content {
+  padding: 32px;
+}
+.service-card__content svg {
+  fill: var(--service-icon-color);
+  margin-bottom: 16px;
+}
+.service-card__footer {
+  margin-top: auto;
+  padding-bottom: 32px;
+}
+
+.info-card {
+  height: 100%;
+  padding: 20px;
+}
+.info-card svg {
+  fill: var(--secondary);
+  margin-bottom: 20px;
+}
+.info-card__title {
+  font-size: 24px;
+  font-weight: 700;
+  min-height: 60px;
+  margin-bottom: 12px;
+}
+.info-card__text {
+  font-weight: 300;
+}
+
 /* Секции */
+.service__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  margin-bottom: 50px;
+}
+.features__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 40px;
+  margin-bottom: 50px;
+}
 /* Модальные окна */
 /*# sourceMappingURL=main.css.map */

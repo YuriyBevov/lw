@@ -1,0 +1,16 @@
+mixin service-card(data)
+  .service-card(class= data.title.className ? data.title.className : null)
+    .service-card__content
+      if data.icon
+        svg(width= data.icon.width height= data.icon.height)
+          use(xlink:href=`./assets/sprite.svg#icon-${data.icon.name}`)
+
+      if data.title
+        span.service-card__title(class= data.title.className ? data.title.className : null)!= data.title.text
+
+      if data.text
+        span.service-card__text(class= data.text.className ? data.text.className : null)!= data.text.content
+
+    if data.price
+      .service-card__footer
+        span.lw-price-badge(class= data.text.className ? data.text.className : null)!= data.price.value

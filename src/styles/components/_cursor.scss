@@ -1,0 +1,28 @@
+.cursor {
+	display: none;
+}
+
+/*Есть ли у устройства указывающее уст-во ( напр. мышь)*/
+@media (any-pointer:fine) {
+  .custom-cursor-container.hidden {
+    display: none;
+  }
+
+	.cursor {
+		position: fixed;
+		top: 0;
+		left: 0;
+		display: block;
+		pointer-events: none;
+		z-index: 499;
+
+    stroke: var(--purple-3);
+    mix-blend-mode: difference;
+	}
+
+	.no-js .cursor {
+		display: none;
+	}
+}
+
+

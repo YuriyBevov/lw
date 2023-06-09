@@ -1,0 +1,26 @@
+include ../../content/index-page-content/services
+
+include ../../mixins/main-title
+include ../../mixins/service-card
+include ../../mixins/main-btn
+
+section.lw-section.service
+  .lw-container
+    +main-title({
+      selector: 'h2',
+      className: 'lw-main-title',
+      text: 'Что мы&nbsp;<span>делаем</span>',
+    })
+
+    ul.service__list
+      each service in services
+        li.service__list-item
+          +service-card(service)
+
+    +main-btn({
+      type: 'button',
+      text: 'Оставить заявку'
+    })
+
+
+

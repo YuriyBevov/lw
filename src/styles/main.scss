@@ -8,9 +8,12 @@
 @import "common";
 
 /* Компоненты */
+@import "./components/cursor";
+@import "./components/service-card";
+@import "./components/info-card";
 
 /* Секции */
+@import "./sections/index-page-sections/services";
+@import "./sections/index-page-sections/features";
 
 /* Модальные окна */
-
-

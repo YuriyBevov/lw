@@ -53,5 +53,8 @@
   "bugs": {
     "url": "https://github.com/YuriyBevov/lw/issues"
   },
-  "homepage": "https://github.com/YuriyBevov/lw#readme"
+  "homepage": "https://github.com/YuriyBevov/lw#readme",
+  "dependencies": {
+    "gsap": "file:gsap-bonus.tgz"
+  }
 }

@@ -3,3 +3,40 @@
 .main-scroll {
 
 }
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.button-reset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: none;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-centered-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glassmorph-bg {
+  background-color: var(--service-card-bg);
+  border-radius: 4px;
+  backdrop-filter: blur(50px);
+}
+
+

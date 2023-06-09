@@ -15,10 +15,12 @@ html(lang="ru")
     include ./main-header
 
     main
-      block content
+      #smooth-wrapper
+        #smooth-content
+          block content
 
     include ./main-footer
 
+    include ../components/custom_cursor
     block modals
-
     block scripts

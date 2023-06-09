@@ -1,0 +1,33 @@
+.service-card {
+  @extend .flex-column;
+  height: 100%;
+
+  @extend .glassmorph-bg;
+
+  &__title {
+    font-family: var(--base-font);
+    font-size: 24px;
+    font-weight: 700;
+    min-height: 60px;
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    font-weight: 300;
+  }
+
+  &__content {
+    @extend .flex-column;
+    padding: 32px;
+
+    svg {
+      fill: var(--service-icon-color);
+      margin-bottom: 16px;
+    }
+  }
+
+  &__footer {
+    margin-top: auto;
+    padding-bottom: 32px;
+  }
+}

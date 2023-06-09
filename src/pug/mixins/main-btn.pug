@@ -1,0 +1,6 @@
+mixin main-btn(data)
+  if data.type == 'button'
+    button.lw-main-btn(type="button" class= data.className ? data.className : null)!= data.text
+
+  if data.type == 'link'
+    a.lw-main-btn(href= data.url class= data.className ? data.className : null)!= data.text

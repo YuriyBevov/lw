@@ -3,32 +3,49 @@
 
 :root {
     // base
-    --font-family: "...", sans-serif;
-    --content-width: 1160px;
-    --content-fluid-width: 1790px;
+
+    --base-font: "MontserratAlternates", sans-serif;
+    --alt-font: "Lato", sans-serif;
+    --content-width: 1400px;
+    --content-sm-width: 1140px;
+    --content-fluid-width: 1920px;
     --container-offset: 15px;
     --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
-    --container-fluid-width: calc(var(--content-fluid-width) + (var(--container-offset) * 2));
+    --container-sm-width: calc(var(--content-sm-width) + (var(--container-offset) * 2));
+    --container-fluid-width: var(--content-fluid-width);
 
     // colors
-    --light-color: #fff;
-    --accent-color: #d52027;
-    --dark-color: #141024;
-    --text-color: rgba(20, 16, 36, 0.7);
+    --accent        : #d52027;
+    --primary       : #10164a;
+    --secondary     : #8468f6;
+    --warning       : #ec9a29;
 
-    --main-bg-color: var(--light-color);
+    --white         : #ffffff;
+    --black         : #000000;
 
+    --purple-0: #080D39;
+    --purple-1: #151B53;
+    --purple-2: #2B209B;
+    --purple-3: #5030d4;
+    --purple-4: #6E52E0;
+    --purple-5: #8468f6;
+    --purple-6: #947bfb;
+    --purple-7: #7672FF;
+
+    --primary-text-color: var(--white);
+    --main-bg-color: var(--primary);
+    --alt-bg-color: var(--purple-0);
+
+    --price-badge-linear-bg: linear-gradient(270deg, #EC9A29 59.62%, rgba(236, 154, 41, 0.29) 142.88%);
+    --main-box-shadow: 2px 4px 6px rgba(236, 154, 41, 0.42);
+
+    // service-card
+    --service-card-bg: rgba(67, 21, 255, 0.2);
+    --service-icon-color: var(--purple-6);
+    // main-btn
+    --main-button-linear-bg: linear-gradient(90deg, #F5DFA0 0%, #EC9A29 68.75%);
     // scrollbar
-    --main-scrollbar-width: 6px;
-    --main-scrollbar-color: var(--light-color);
-    --main-scrollbar-thumb-color: var(--accent-color);
-
-    // text-sizes
-    --text-xxl: clamp(36px, 7.5vw, 64px);
-    --text-xl: clamp(28px, 5vw, 44px);
-    --text-lg: clamp(24px, 4vw, 36px);
-    --text-md: clamp(20px, 3.5vw, 32px);
-    --text-sm: clamp(16px, 3vw, 28px);
-    --text-xs: 14px;
-    --text-xxs: 12px;
+    --main-scrollbar-width         : 6px;
+    --main-scrollbar-color         : var(--purple-6);
+    --main-scrollbar-thumb-color   : var(--primary);
   }

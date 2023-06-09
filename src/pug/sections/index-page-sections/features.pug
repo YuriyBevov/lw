@@ -1,0 +1,23 @@
+include ../../content/index-page-content/features
+
+include ../../mixins/main-title
+include ../../mixins/info-card
+include ../../mixins/main-btn
+
+section.lw-section.features
+  .lw-container
+    +main-title({
+      selector: 'h2',
+      className: 'lw-main-title',
+      text: 'Почему выбирают&nbsp;<span>нас</span>',
+    })
+
+    ul.features__list
+      each feature in features
+        li.features__list-item
+          +info-card(feature)
+
+    +main-btn({
+      type: 'button',
+      text: 'Оставить заявку'
+    })

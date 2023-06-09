@@ -26,13 +26,19 @@
   }
 }
 
+@mixin m-b-tablet-lg-down {
+  @media (max-width: (960px)) {
+    @content;
+  }
+}
+
 @mixin m-b-tablet-down {
   @media (max-width: (768px)) {
     @content;
   }
 }
 
-@mixin m-b-mobile-small-down {
+@mixin m-b-mobile-lg-down {
   @media (max-width: (534px)) {
     @content;
   }
@@ -47,31 +53,37 @@
 }
 
 @mixin m-b-desktop-lg-up {
-  @media (min-width: (1920px)) {
+  @media (min-width: (1919px)) {
     @content;
   }
 }
 
 @mixin m-b-desktop-up {
-  @media (min-width: (1440px)) {
+  @media (min-width: (1439px)) {
     @content;
   }
 }
 
 @mixin m-b-laptop-up {
-  @media (min-width: (1024px)) {
+  @media (min-width: (1023px)) {
+    @content;
+  }
+}
+
+@mixin m-b-tablet-lg-up {
+  @media (max-width: (959px)) {
     @content;
   }
 }
 
 @mixin m-b-tablet-up {
-  @media (min-width: (768px)) {
+  @media (min-width: (767px)) {
     @content;
   }
 }
 
-@mixin m-b-mobile-small-up {
-  @media (min-width: (534px)) {
+@mixin m-b-mobile-lg-up {
+  @media (min-width: (533px)) {
     @content;
   }
 }
