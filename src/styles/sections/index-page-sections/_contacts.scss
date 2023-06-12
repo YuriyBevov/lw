@@ -1,0 +1,26 @@
+.contacts {
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 40px;
+  }
+
+  &__field {
+    @extend .flex-column;
+
+    span {
+      display: inline-block;
+      @extend .light-text;
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    a {
+      font-weight: 700;
+      font-size: 40px;
+      color: var(--white);
+
+      @extend .hover-opacity;
+    }
+  }
+}

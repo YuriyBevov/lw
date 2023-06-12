@@ -1,0 +1,242 @@
+.workflow {
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__steps {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 162px;
+    padding: 80px 0;
+
+    @include m-b-down(1140px) {
+      display: none;
+    }
+
+    &-line {
+      position: relative;
+      width: 100%;
+      height: 2px;
+
+      background-color: var(--purple-3);
+
+      &::before,
+      &::after {
+        position: absolute;
+        top: 0;
+        content: '';
+        width: inherit;
+        height: inherit;
+        background-color: var(--purple-3);
+        z-index: -1;
+      }
+
+      &::before {
+        left: -50%;
+      }
+
+      &::after {
+        left: 50%;
+      }
+    }
+
+    &-dots {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding-right: calc(100% / 9);
+    }
+
+    &-dot {
+      position: relative;
+      width: 50px;
+      height: 50px;
+
+      border-radius: 50%;
+
+      background-color: var(--main-bg-color);
+      border: 2px solid var(--purple-3);
+      margin-right: auto;
+
+      &::before,
+      &::after {
+        position: absolute;
+
+        left: 50%;
+        content: "";
+        transform: translateX(-50%);
+
+        background-color: var(--purple-3);
+      }
+
+      &::before {
+        width: 2px;
+        height: 42px;
+      }
+
+      &:nth-of-type(even) {
+        &::before {
+          top: -43px;
+        }
+
+        &::after {
+          top: -50px;
+        }
+      }
+
+      &:nth-of-type(odd) {
+        &::before {
+          top: 47px;
+        }
+
+        &::after {
+          top: 80px;
+        }
+      }
+
+      &::after {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+
+        background-color: var(--purple-3);
+      }
+
+    }
+
+    &-inner-dot {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      transform: translate(-50%, -50%);
+
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+
+      background-color: var(--purple-3);
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__list {
+    @extend .list-reset;
+    display: grid;
+    grid-template-columns: repeat(17, 1fr);
+    grid-row-gap: 240px;
+    grid-column-gap: 30px;
+
+    @include m-b-down(1140px) {
+      display: flex;
+      flex-direction: column;
+      grid-row-gap: 0;
+    }
+
+    &-item {
+      min-width: fit-content;
+      display: flex;
+      flex-direction: column;
+
+      @include m-b-down(1140px) {
+        position: relative;
+        padding-left: 60px;
+        padding-bottom: 40px;
+        padding-top: 5px;
+
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+
+          width: 30px;
+          height: 30px;
+
+          content: '';
+          background-color: var(--purple-3);
+          border: 2px solid var(--purple-3);
+          box-shadow: inset 0 0 0 8px var(--primary);
+          border-radius: 50%;
+        }
+
+        &:not(:last-child)::after {
+          position: absolute;
+          top: 30px;
+          left: 14px;
+
+          width: 2px;
+          height: calc(100% - 30px);
+
+          content: '';
+
+          background-color: var(--purple-3);
+        }
+      }
+
+      &-title {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.1;
+        margin: 0;
+        margin-bottom: 16px;
+      }
+
+      &-text {
+        font-weight: 300;
+        margin: 0;
+        @extend .light-text;
+      }
+
+
+      &:nth-child(even) {
+        justify-content: flex-end;
+
+        @include m-b-down(1140px) {
+          justify-content: flex-start;
+        }
+      }
+
+      &:nth-child(odd) {
+        grid-row: 2/3;
+      }
+
+      &:nth-child(even) {
+        grid-row: 1/2;
+      }
+
+      &:nth-child(1) {
+        grid-column: 1/6;
+      }
+
+      &:nth-child(2) {
+        grid-column: 3/8;
+      }
+
+      &:nth-child(3) {
+        grid-column: 6/11;
+      }
+
+      &:nth-child(4) {
+        grid-column: 8/13;
+      }
+
+      &:nth-child(5) {
+        grid-column: 11/16;
+      }
+
+      &:nth-child(6) {
+        grid-column: 13/18;
+      }
+    }
+  }
+}

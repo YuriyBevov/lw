@@ -22,6 +22,7 @@
 
     --white         : #ffffff;
     --black         : #000000;
+    --lightblack    : #232323;
 
     --purple-0: #080D39;
     --purple-1: #151B53;
@@ -45,7 +46,9 @@
     // main-btn
     --main-button-linear-bg: linear-gradient(90deg, #F5DFA0 0%, #EC9A29 68.75%);
     // scrollbar
-    --main-scrollbar-width         : 6px;
+    --main-scrollbar-width         : 10px;
     --main-scrollbar-color         : var(--purple-6);
     --main-scrollbar-thumb-color   : var(--primary);
+
+    --main-transition: .25s 0.05s ease-in;
   }

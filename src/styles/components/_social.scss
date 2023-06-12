@@ -1,0 +1,17 @@
+.social {
+  &__list {
+    @extend .list-reset;
+    @extend .flex;
+    width: 100%;
+  }
+
+  &__list-item {
+
+    a {
+      @extend .flex-centered-content;
+      svg {
+        fill: var(--white);
+      }
+    }
+  }
+}

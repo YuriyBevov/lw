@@ -1,5 +1,6 @@
 include ../../mixins/main-title
 
+
 section.lw-section.contacts
   .lw-container
     +main-title({
@@ -7,3 +8,17 @@ section.lw-section.contacts
       className: 'lw-main-title',
       text: 'Как с нами &nbsp;<span>связаться</span>',
     })
+
+    .contacts__content
+      .contacts__field
+        span Телефон:
+        include ../../content/common/company-phone
+
+      .contacts__field
+        span Электронная почта:
+        include ../../content/common/company-mail
+
+      .contacts__field
+        span Мы в соцсетях:
+        include ../../components/social
+

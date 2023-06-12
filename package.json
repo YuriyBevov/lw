@@ -55,6 +55,8 @@
   },
   "homepage": "https://github.com/YuriyBevov/lw#readme",
   "dependencies": {
-    "gsap": "file:gsap-bonus.tgz"
+    "gsap": "file:gsap-bonus.tgz",
+    "imask": "^6.6.3",
+    "swiper": "^9.4.0"
   }
 }

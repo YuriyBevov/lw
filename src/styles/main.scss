@@ -11,9 +11,15 @@
 @import "./components/cursor";
 @import "./components/service-card";
 @import "./components/info-card";
+@import "./components/social";
+@import "./components/callback-form";
 
 /* Секции */
+@import "./sections/common-sections/callback";
+
 @import "./sections/index-page-sections/services";
 @import "./sections/index-page-sections/features";
-
+@import "./sections/index-page-sections/workflow";
+@import "./sections/index-page-sections/contacts";
+@import "./sections/index-page-sections/clients";
 /* Модальные окна */

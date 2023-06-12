@@ -1,9 +1,34 @@
+include ../../content/index-page-content/workflow-steps
 include ../../mixins/main-title
+
 
 section.lw-section.workflow
   .lw-container
     +main-title({
       selector: 'h2',
-      className: 'lw-main-title',
+      className: 'lw-main-title workflow__title',
       text: 'Как происходит рабочий&nbsp;<span>процесс</span>',
     })
+
+    .workflow__wrapper
+      ul.workflow__list
+        each step in workflowStepList
+          li.workflow__list-item
+            span.workflow__list-item-title!= step.title
+            p.workflow__list-item-text!= step.desc
+
+      .workflow__steps(aria-hidden="true")
+        .workflow__steps-line
+          .workflow__steps-dots
+            .workflow__steps-dot
+              .workflow__steps-inner-dot
+            .workflow__steps-dot
+              .workflow__steps-inner-dot
+            .workflow__steps-dot
+              .workflow__steps-inner-dot
+            .workflow__steps-dot
+              .workflow__steps-inner-dot
+            .workflow__steps-dot
+              .workflow__steps-inner-dot
+            .workflow__steps-dot
+              .workflow__steps-inner-dot

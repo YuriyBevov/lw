@@ -1,0 +1,12 @@
+include ../../mixins/main-title
+
+section.lw-section.callback
+  .lw-container
+    +main-title({
+      selector: 'h2',
+      className: 'lw-main-title',
+      text: 'Давайте <span>работать&nbsp;вместе</span> над следующим проектом',
+    })
+
+    include ../../components/callback-form
+
