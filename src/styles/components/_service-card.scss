@@ -1,19 +1,19 @@
 .service-card {
   @extend .flex-column;
   height: 100%;
-
   @extend .glassmorph-bg;
 
   &__title {
-    font-family: var(--base-font);
-    font-size: 24px;
-    font-weight: 700;
-    min-height: 60px;
+    font-size: 22px;
+    line-height: 1.1;
+    font-weight: 400;
+    min-height: 55px;
     margin-bottom: 8px;
   }
 
   &__text {
     font-weight: 300;
+    @extend .light-text;
   }
 
   &__content {

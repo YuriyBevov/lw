@@ -99,7 +99,18 @@
       opacity: .4;
     }
   }
+}
 
+.hover-underline {
+  position: relative;
+  transition: color var(--main-transition);
+
+  @include m-b-mobile-lg-up {
+    &:hover,
+    &:focus {
+      color: var(--secondary);
+    }
+  }
 }
 
 

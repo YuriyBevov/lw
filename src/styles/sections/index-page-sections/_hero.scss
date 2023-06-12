@@ -1,0 +1,29 @@
+.hero {
+  padding: 120px 0;
+  outline: 1px solid red;
+
+  &__container {
+    @extend .flex-column;
+    align-items: center;
+    max-width: 750px;
+    padding: 50px 15px;
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 90px;
+    line-height: 1.1;
+    font-family: var(--alt-font);
+    text-align: center;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    font-size: 24px;
+    font-weight: 300;
+    @extend .light-text;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+}

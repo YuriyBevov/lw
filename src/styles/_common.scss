@@ -16,6 +16,7 @@
 
   &-main-title {
     position: relative;
+    font-family: var(--alt-font);
     font-weight: 600;
     font-size: 54px;
     line-height: 1.1;
@@ -79,12 +80,14 @@
     min-height: 40px;
     padding: 14px 32px;
 
+    font-family: var(--alt-font);
     font-weight: 700;
     font-size: 18px;
     border-radius: 50px;
     box-shadow: var(--main-box-shadow);
     background: var(--main-button-linear-bg);
     color: var(--primary);
+    cursor: pointer;
   }
 
   &-section {

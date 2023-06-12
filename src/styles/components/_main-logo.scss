@@ -1,0 +1,16 @@
+.main-logo {
+  @extend .hover-opacity;
+  @extend .flex-column;
+
+  img {
+    margin-bottom: 10px;
+  }
+
+  span {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+    @extend .light-text;
+    color: var(--white);
+  }
+}

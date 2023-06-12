@@ -11,19 +11,36 @@
     <script defer="defer" src="./assets/bundle.js"></script>
   </head>
   <body>
-    <header>
-      <p>header</p>
+    <header class="main-header">
+      <div class="lw-container-fluid main-header__container"><a class="main-logo" href="/" aria-label="LittleWeb.ru - создание сайтов и приложений под ключ."><img src="./assets/img/main-logo.svg" alt="Littleweb.ru" width="240" height="50"><span>Создание сайтов под ключ</span></a>
+        <nav class="main-nav">
+          <ul>
+            <li><a class="anchor-link" href="#services">Услуги</a></li>
+            <li><a class="anchor-link" href="#features">О нас</a></li>
+            <li><a class="anchor-link" href="#portfolio">Портфолио</a></li>
+            <li><a class="anchor-link" href="#clients">Наши клиенты</a></li>
+            <li><a class="anchor-link" href="#contacts">Контакты</a></li>
+          </ul>
+          <div class="main-nav__contacts"><a href="tel:88008888888">8 (800) 888-88-88</a><a href="mailto:info@littleweb.ru" rel="noopener noreferrer nofollow">info@littleweb.ru</a></div>
+        </nav>
+      </div>
     </header>
     <main>
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <section class="section">
             <div class="container">
-              <section class="lw-section service">
+              <section class="hero" id="hero">
+                <div class="lw-container hero__container">
+                  <h1 class="hero__title">Наш креатив для Вашего успеха</h1>
+                  <p class="hero__text">Превратим Вашу идею в успешный интернет-бизнес</p><a class="lw-main-btn anchor-link" href="#callback">Оставить заявку</a>
+                </div>
+              </section>
+              <section class="lw-section services" id="services">
                 <div class="lw-container">
                                 <h2 class="lw-main-title">Что мы&nbsp;<span>делаем</span></h2>
-                  <ul class="service__list">
-                    <li class="service__list-item">
+                  <ul class="services__list">
+                    <li class="services__list-item">
                                     <div class="service-card">
                                       <div class="service-card__content">
                                         <svg width="80" height="80">
@@ -33,7 +50,7 @@
                                       <div class="service-card__footer"><span class="lw-price-badge">от&nbsp;20&nbsp;000&nbsp;руб.</span></div>
                                     </div>
                     </li>
-                    <li class="service__list-item">
+                    <li class="services__list-item">
                                     <div class="service-card">
                                       <div class="service-card__content">
                                         <svg width="80" height="80">
@@ -43,7 +60,7 @@
                                       <div class="service-card__footer"><span class="lw-price-badge">от&nbsp;30&nbsp;000&nbsp;руб.</span></div>
                                     </div>
                     </li>
-                    <li class="service__list-item">
+                    <li class="services__list-item">
                                     <div class="service-card">
                                       <div class="service-card__content">
                                         <svg width="80" height="80">
@@ -53,7 +70,7 @@
                                       <div class="service-card__footer"><span class="lw-price-badge">от&nbsp;120&nbsp;000&nbsp;руб.</span></div>
                                     </div>
                     </li>
-                    <li class="service__list-item">
+                    <li class="services__list-item">
                                     <div class="service-card">
                                       <div class="service-card__content">
                                         <svg width="80" height="80">
@@ -63,36 +80,35 @@
                                       <div class="service-card__footer"><span class="lw-price-badge">от&nbsp;80&nbsp;000&nbsp;руб.</span></div>
                                     </div>
                     </li>
-                    <li class="service__list-item">
+                    <li class="services__list-item">
                                     <div class="service-card">
                                       <div class="service-card__content">
                                         <svg width="80" height="80">
-                                          <use xlink:href="./assets/sprite.svg#icon-apps"></use>
+                                          <use xlink:href="./assets/sprite.svg#icon-app"></use>
                                         </svg><span class="service-card__title">Web-приложения</span><span class="service-card__text">Короткие и длинные. Адаптив, скорость загрузки, микроанимации, семантика и SEO-френдли разметка.</span>
                                       </div>
                                       <div class="service-card__footer"><span class="lw-price-badge">от&nbsp;80&nbsp;000&nbsp;руб.</span></div>
                                     </div>
                     </li>
-                    <li class="service__list-item">
+                    <li class="services__list-item">
                                     <div class="service-card">
                                       <div class="service-card__content">
                                         <svg width="80" height="80">
-                                          <use xlink:href="./assets/sprite.svg#icon-apps"></use>
+                                          <use xlink:href="./assets/sprite.svg#icon-seo"></use>
                                         </svg><span class="service-card__title">Оптимизируем сайты в поисковой выдаче(SEO)</span><span class="service-card__text">Поможем вывести Ваш сайт в ТОП-20 поисковой выдачи.</span>
                                       </div>
                                       <div class="service-card__footer"><span class="lw-price-badge">от&nbsp;40&nbsp;000&nbsp;руб./месяц</span></div>
                                     </div>
                     </li>
-                  </ul>
-                                <button class="lw-main-btn" type="button">Оставить заявку</button>
+                  </ul><a class="lw-main-btn anchor-link" href="#callback">Оставить заявку</a>
                 </div>
               </section>
-              <section class="lw-section stack">
+              <section class="lw-section stack" id="stack">
                 <div class="lw-container">
                                 <h2 class="lw-main-title">Что мы <span>используем</span> в работе</h2>
                 </div>
               </section>
-              <section class="lw-section features">
+              <section class="lw-section features" id="features">
                 <div class="lw-container">
                                 <h2 class="lw-main-title">Почему <span>выбирают</span> нас</h2>
                   <ul class="features__list">
@@ -100,14 +116,14 @@
                                     <div class="info-card">
                                       <svg width="80" height="80">
                                         <use xlink:href="./assets/sprite.svg#icon-clock"></use>
-                                      </svg><span class="info-card__title">Быстро запускаем проекты в работу</span><span class="info-card__text">У нас слаженный механизм, позволяющий быстро и эффективно оценить проект, заключить договор, подписать NDA и в кротчайшие сроки сдать проект.</span>
+                                      </svg><span class="info-card__title">Не тратим время зря</span><span class="info-card__text">Стараемся максимально быстро и эффективно оценить проект, заключить договор и запустить проект в работу</span>
                                     </div>
                     </li>
                     <li class="features__list-item">
                                     <div class="info-card">
                                       <svg width="80" height="80">
                                         <use xlink:href="./assets/sprite.svg#icon-lamp"></use>
-                                      </svg><span class="info-card__title">Индивидуальный подход к каждому </span><span class="info-card__text">Мы с радостью разработаем уникальный дизайн сайта, который будет отображать вашу уникальность и удовлетворять всем вашим требованиям и пожеланиям.</span>
+                                      </svg><span class="info-card__title">Индивидуальный подход</span><span class="info-card__text">Окунемся с головой в Вашу идею и предложим несколько вариантов для ее реализации</span>
                                     </div>
                     </li>
                     <li class="features__list-item">
@@ -121,16 +137,15 @@
                                     <div class="info-card">
                                       <svg width="80" height="80">
                                         <use xlink:href="./assets/sprite.svg#icon-money"></use>
-                                      </svg><span class="info-card__title">Справедливая рыночная цена</span><span class="info-card__text">Обеспечим достойное качество, которое соответсвует реальной стоимости услуг и является разумным для клиентов.</span>
+                                      </svg><span class="info-card__title">Справедливая рыночная цена</span><span class="info-card__text">Обеспечим достойное качество, которое соответсвует реальной стоимости услуг и является разумной для клиентов.</span>
                                     </div>
                     </li>
-                  </ul>
-                                <button class="lw-main-btn" type="button">Оставить заявку</button>
+                  </ul><a class="lw-main-btn anchor-link" href="#callback">Оставить заявку</a>
                 </div>
               </section>
-              <section class="lw-section workflow">
+              <section class="lw-section workflow" id="workflow">
                 <div class="lw-container">
-                                <h2 class="lw-main-title workflow__title">Как происходит рабочий&nbsp;<span>процесс</span></h2>
+                                <h2 class="lw-main-title workflow__title">Как происходит <span>рабочий&nbsp;процесс</span></h2>
                   <div class="workflow__wrapper">
                     <ul class="workflow__list">
                       <li class="workflow__list-item"><span class="workflow__list-item-title">Предварительно оцениваем</span>
@@ -179,42 +194,31 @@
                   </div>
                 </div>
               </section>
-              <section class="lw-section clients">
+              <section class="lw-section clients" id="clients">
                 <div class="lw-container">
                                 <h2 class="lw-main-title">Наши <span>клиенты</span></h2>
                   <div class="swiper clients-slider">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide"><a href="#" rel="noopener noreferrer nofollow" aria-label=""><img src="./assets/img/clients/joywork-logo.svg" alt="Бюро переводов Импрешн" width="200" height="70"></a></div>
-                      <!--.swiper-slide
-                      a(href="#" rel="noopener noreferrer nofollow" aria-label="Бюро переводов Импрешн")
-                        img(src="./assets/img/clients/impression-logo.svg" alt="Бюро переводов Импрешн" width="200" height="70")
-                      
-                      -->
+                      <div class="swiper-slide"><a href="#" rel="noopener noreferrer nofollow" aria-label="Бюро переводов Импрешн"><img src="./assets/img/clients/impression-logo.svg" alt="Бюро переводов Импрешн" width="200" height="70"></a></div>
                       <div class="swiper-slide dark-bg"><a href="#" rel="noopener noreferrer nofollow" aria-label="Бюро переводов Импрешн"><img src="./assets/img/clients/niti-logo.svg" alt="Бюро переводов Импрешн" width="200" height="70"></a></div>
-                      <!--.swiper-slide
-                      a(href="#" rel="noopener noreferrer nofollow" aria-label="Бюро переводов Импрешн")
-                        img(src="./assets/img/clients/cldoc-logo.svg" alt="Бюро переводов Импрешн" width="200" height="70")
-                      
-                      -->
+                      <div class="swiper-slide"><a href="#" rel="noopener noreferrer nofollow" aria-label="Бюро переводов Импрешн"><img src="./assets/img/clients/cldoc-logo.svg" alt="Бюро переводов Импрешн" width="200" height="70"></a></div>
                       <!--.swiper-slide
                       a(href="#" rel="noopener noreferrer nofollow" aria-label="Бюро переводов Импрешн")
                         img(src="./assets/img/clients/gmt-clinic-logo.svg" alt="Бюро переводов Импрешн" width="200" height="70")
                       
                       -->
-                      <!--.swiper-slide.dark-bg
-                      a(href="#" rel="noopener noreferrer nofollow" aria-label="")
-                        img(src="./assets/img/clients/pogdveri-logo.svg" alt="Бюро переводов Импрешн" width="200" height="70")
-                      -->
+                      <div class="swiper-slide dark-bg"><a href="#" rel="noopener noreferrer nofollow" aria-label=""><img src="./assets/img/clients/pogdveri-logo.svg" alt="Бюро переводов Импрешн" width="200" height="70"></a></div>
                     </div>
                   </div>
                 </div>
               </section>
-              <section class="lw-section portfolio">
+              <section class="lw-section portfolio" id="portfolio">
                 <div class="lw-container">
-                                <h2 class="lw-main-title">Примеры <span>работ</span></h2>
+                                <h2 class="lw-main-title"><span>Примеры</span> работ</h2>
                 </div>
               </section>
-              <section class="lw-section callback">
+              <section class="lw-section callback" id="callback">
                 <div class="lw-container">
                                 <h2 class="lw-main-title">Давайте <span>работать&nbsp;вместе</span> над следующим проектом</h2>
                   <form class="callback-form" action="#" method="POST">
@@ -248,7 +252,7 @@
                   </form>
                 </div>
               </section>
-              <section class="lw-section contacts">
+              <section class="lw-section contacts" id="contacts">
                 <div class="lw-container">
                                 <h2 class="lw-main-title">Как с нами &nbsp;<span>связаться</span></h2>
                   <div class="contacts__content">

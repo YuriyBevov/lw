@@ -7,6 +7,7 @@
 
   &__field {
     @extend .flex-column;
+    font-family: var(--alt-font);
 
     span {
       display: inline-block;

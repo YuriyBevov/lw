@@ -7,19 +7,27 @@
 @import "extends";
 @import "common";
 
+
+@import "./layout/main-header";
+@import "./layout/main-footer";
+
 /* Компоненты */
 @import "./components/cursor";
+@import "./components/main-nav";
 @import "./components/service-card";
 @import "./components/info-card";
 @import "./components/social";
 @import "./components/callback-form";
+@import "./components/main-logo";
 
 /* Секции */
-@import "./sections/common-sections/callback";
+@import "./sections/index-page-sections/hero";
+
 
 @import "./sections/index-page-sections/services";
 @import "./sections/index-page-sections/features";
 @import "./sections/index-page-sections/workflow";
 @import "./sections/index-page-sections/contacts";
 @import "./sections/index-page-sections/clients";
+@import "./sections/common-sections/callback";
 /* Модальные окна */

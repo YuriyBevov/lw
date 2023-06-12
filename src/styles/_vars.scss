@@ -4,11 +4,11 @@
 :root {
     // base
 
-    --base-font: "MontserratAlternates", sans-serif;
-    --alt-font: "Lato", sans-serif;
+    --base-font: "Lato", sans-serif;
+    --alt-font: "MontserratAlternates", sans-serif;
     --content-width: 1400px;
     --content-sm-width: 1140px;
-    --content-fluid-width: 1920px;
+    --content-fluid-width: 1720px;
     --container-offset: 15px;
     --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
     --container-sm-width: calc(var(--content-sm-width) + (var(--container-offset) * 2));
@@ -50,5 +50,5 @@
     --main-scrollbar-color         : var(--purple-6);
     --main-scrollbar-thumb-color   : var(--primary);
 
-    --main-transition: .25s 0.05s ease-in;
+    --main-transition: .25s ease-in;
   }

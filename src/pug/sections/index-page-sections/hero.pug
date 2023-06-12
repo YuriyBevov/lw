@@ -1,0 +1,13 @@
+include ../../mixins/main-btn
+
+section.hero#hero
+  .lw-container.hero__container
+    h1.hero__title Наш креатив для Вашего успеха
+    p.hero__text Превратим Вашу идею в успешный интернет-бизнес
+
+    +main-btn({
+      className: 'anchor-link',
+      type: 'link',
+      url: '#callback',
+      text: 'Оставить заявку'
+    })

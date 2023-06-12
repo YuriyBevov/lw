@@ -1191,11 +1191,11 @@ button.swiper-pagination-bullet {
 /* stylelint-disable color-function-notation */
 /* stylelint-disable alpha-value-notation */
 :root {
-  --base-font: "MontserratAlternates", sans-serif;
-  --alt-font: "Lato", sans-serif;
+  --base-font: "Lato", sans-serif;
+  --alt-font: "MontserratAlternates", sans-serif;
   --content-width: 1400px;
   --content-sm-width: 1140px;
-  --content-fluid-width: 1920px;
+  --content-fluid-width: 1720px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
   --container-sm-width: calc(var(--content-sm-width) + (var(--container-offset) * 2));
@@ -1226,7 +1226,7 @@ button.swiper-pagination-bullet {
   --main-scrollbar-width: 10px;
   --main-scrollbar-color: var(--purple-6);
   --main-scrollbar-thumb-color: var(--primary);
-  --main-transition: .25s 0.05s ease-in;
+  --main-transition: .25s ease-in;
 }
 
 /* stylelint-disable */
@@ -1284,7 +1284,7 @@ button.swiper-pagination-bullet {
 }
 @font-face {
   font-family: "Lato";
-  src: url("../assets/fonts/../fonts/Lato-Regulat.woff2") format("woff2");
+  src: url("../assets/fonts/../fonts/Lato-Regular.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
   font-style: normal;
@@ -1299,6 +1299,20 @@ button.swiper-pagination-bullet {
 @font-face {
   font-family: "Lato";
   src: url("../assets/fonts/../fonts/Lato-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Verdana";
+  src: url("../assets/fonts/../fonts/Verdana.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Verdana";
+  src: url("../assets/fonts/../fonts/Verdana-Bold.woff2") format("woff2");
   font-weight: 700;
   font-display: swap;
   font-style: normal;
@@ -1351,7 +1365,6 @@ main {
   -ms-flex-direction: column;
   flex-direction: column;
   height: 100%;
-  padding: 50px 0;
 }
 
 footer {
@@ -1413,7 +1426,7 @@ a {
   border: none;
 }
 
-.list-reset, .workflow__list, .features__list, .service__list, .social__list {
+.list-reset, .workflow__list, .features__list, .services__list, .social__list, .main-nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1426,7 +1439,7 @@ a {
   background-color: none;
 }
 
-.flex, .callback-form input[type=file] + label, .social__list {
+.flex, .callback-form input[type=file] + label, .social__list, .main-nav__contacts, .main-nav ul, .main-nav, .main-header__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1434,7 +1447,7 @@ a {
   flex-wrap: wrap;
 }
 
-.flex-column, .contacts__field, .callback-form fieldset, .info-card, .service-card__content, .service-card {
+.flex-column, .contacts__field, .hero__container, .main-logo, .callback-form fieldset, .info-card, .service-card__content, .service-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1463,19 +1476,31 @@ a {
   backdrop-filter: blur(50px);
 }
 
-.light-text, .contacts__field span, .workflow__list-item-text, .callback-form input[type=file] + label svg, .callback-form input[type=file] + label span, .callback-form label {
+.light-text, .contacts__field span, .workflow__list-item-text, .hero__text, .main-logo span, .callback-form input[type=file] + label svg, .callback-form input[type=file] + label span, .callback-form label, .info-card__text, .service-card__text {
   opacity: 0.7;
 }
 
-.hover-opacity, .contacts__field a {
+.hover-opacity, .contacts__field a, .main-logo, .main-nav__contacts a {
   opacity: 1;
   -webkit-transition: opacity var(--main-transition);
   -o-transition: opacity var(--main-transition);
   transition: opacity var(--main-transition);
 }
 @media (min-width: 533px) {
-  .hover-opacity:hover, .contacts__field a:hover, .hover-opacity:focus, .contacts__field a:focus {
+  .hover-opacity:hover, .contacts__field a:hover, .main-logo:hover, .main-nav__contacts a:hover, .hover-opacity:focus, .contacts__field a:focus, .main-logo:focus, .main-nav__contacts a:focus {
     opacity: 0.4;
+  }
+}
+
+.hover-underline, .main-nav ul li a {
+  position: relative;
+  -webkit-transition: color var(--main-transition);
+  -o-transition: color var(--main-transition);
+  transition: color var(--main-transition);
+}
+@media (min-width: 533px) {
+  .hover-underline:hover, .main-nav ul li a:hover, .hover-underline:focus, .main-nav ul li a:focus {
+    color: var(--secondary);
   }
 }
 
@@ -1493,6 +1518,7 @@ a {
 }
 .lw-main-title {
   position: relative;
+  font-family: var(--alt-font);
   font-weight: 600;
   font-size: 54px;
   line-height: 1.1;
@@ -1553,6 +1579,7 @@ a {
   height: fit-content;
   min-height: 40px;
   padding: 14px 32px;
+  font-family: var(--alt-font);
   font-weight: 700;
   font-size: 18px;
   border-radius: 50px;
@@ -1560,9 +1587,25 @@ a {
   box-shadow: var(--main-box-shadow);
   background: var(--main-button-linear-bg);
   color: var(--primary);
+  cursor: pointer;
 }
 .lw-section {
   padding: 40px 0;
+}
+
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 0;
+  background-color: rgba(21, 27, 83, 0.7);
+  z-index: 999;
+}
+.main-header__container {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 /* Компоненты */
@@ -1591,14 +1634,56 @@ a {
     display: none;
   }
 }
+.main-nav {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: var(--alt-font);
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+.main-nav ul {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+}
+.main-nav ul li a {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--white);
+}
+.main-nav__contacts {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.main-nav__contacts a {
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 12px 20px;
+  color: var(--white);
+  background-color: var(--lightblack);
+}
+.main-nav__contacts a:not(:last-child) {
+  margin-right: 15px;
+}
+
 .service-card {
   height: 100%;
 }
 .service-card__title {
-  font-family: var(--base-font);
-  font-size: 24px;
-  font-weight: 700;
-  min-height: 60px;
+  font-size: 22px;
+  line-height: 1.1;
+  font-weight: 400;
+  min-height: 55px;
   margin-bottom: 8px;
 }
 .service-card__text {
@@ -1625,8 +1710,9 @@ a {
   margin-bottom: 20px;
 }
 .info-card__title {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.1;
+  font-weight: 400;
   min-height: 60px;
   margin-bottom: 12px;
 }
@@ -1654,6 +1740,7 @@ a {
 }
 .callback-form label {
   margin-bottom: 10px;
+  cursor: pointer;
 }
 .callback-form input:not([type=submit]) {
   width: 100%;
@@ -1707,12 +1794,45 @@ a {
   margin-bottom: 0;
 }
 
-/* Секции */
-.callback {
-  background-color: var(--alt-bg-color);
+.main-logo img {
+  margin-bottom: 10px;
+}
+.main-logo span {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--white);
 }
 
-.service__list {
+/* Секции */
+.hero {
+  padding: 120px 0;
+  outline: 1px solid red;
+}
+.hero__container {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: 750px;
+  padding: 50px 15px;
+}
+.hero__title {
+  font-weight: 900;
+  font-size: 90px;
+  line-height: 1.1;
+  font-family: var(--alt-font);
+  text-align: center;
+  margin: 0;
+  margin-bottom: 30px;
+}
+.hero__text {
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.services__list {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -1720,6 +1840,7 @@ a {
   grid-gap: 40px;
   margin-bottom: 50px;
 }
+
 .features__list {
   display: -ms-grid;
   display: grid;
@@ -1903,7 +2024,7 @@ a {
 }
 .workflow__list-item-title {
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.1;
   margin: 0;
   margin-bottom: 16px;
@@ -1972,6 +2093,9 @@ a {
   grid-template-columns: repeat(2, auto);
   grid-gap: 40px;
 }
+.contacts__field {
+  font-family: var(--alt-font);
+}
 .contacts__field span {
   display: inline-block;
   font-size: 18px;
@@ -2005,6 +2129,10 @@ a {
 }
 .clients-slider .swiper-slide.dark-bg {
   background-color: var(--lightblack);
+}
+
+.callback {
+  background-color: var(--alt-bg-color);
 }
 
 /* Модальные окна */

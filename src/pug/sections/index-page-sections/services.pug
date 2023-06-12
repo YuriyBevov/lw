@@ -4,7 +4,7 @@ include ../../mixins/main-title
 include ../../mixins/service-card
 include ../../mixins/main-btn
 
-section.lw-section.service
+section.lw-section.services#services
   .lw-container
     +main-title({
       selector: 'h2',
@@ -12,13 +12,15 @@ section.lw-section.service
       text: 'Что мы&nbsp;<span>делаем</span>',
     })
 
-    ul.service__list
+    ul.services__list
       each service in services
-        li.service__list-item
+        li.services__list-item
           +service-card(service)
 
     +main-btn({
-      type: 'button',
+      className: 'anchor-link',
+      type: 'link',
+      url: '#callback',
       text: 'Оставить заявку'
     })
 

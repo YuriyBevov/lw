@@ -16,6 +16,7 @@
   label {
     margin-bottom: 10px;
     @extend .light-text;
+    cursor: pointer;
   }
 
   input:not([type="submit"]) {

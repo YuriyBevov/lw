@@ -6,6 +6,9 @@
 @include font-face("MontserratAlternates", "../fonts/MontserratAlternates-Bold", 700, normal);
 @include font-face("MontserratAlternates", "../fonts/MontserratAlternates-Black", 900, normal);
 
-@include font-face("Lato", "../fonts/Lato-Regulat", 400, normal);
+@include font-face("Lato", "../fonts/Lato-Regular", 400, normal);
 @include font-face("Lato", "../fonts/Lato-Light", 300, normal);
 @include font-face("Lato", "../fonts/Lato-Bold", 700, normal);
+
+@include font-face("Verdana", "../fonts/Verdana", 400, normal);
+@include font-face("Verdana", "../fonts/Verdana-Bold", 700, normal);

@@ -4,7 +4,7 @@ include ../../mixins/main-title
 include ../../mixins/info-card
 include ../../mixins/main-btn
 
-section.lw-section.features
+section.lw-section.features#features
   .lw-container
     +main-title({
       selector: 'h2',
@@ -18,6 +18,8 @@ section.lw-section.features
           +info-card(feature)
 
     +main-btn({
-      type: 'button',
+      className: 'anchor-link',
+      type: 'link',
+      url: '#callback',
       text: 'Оставить заявку'
     })
